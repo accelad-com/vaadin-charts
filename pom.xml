@@ -32,7 +32,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.organization>Vaadin Ltd</project.organization>
-        <vaadin.version>7.5.4</vaadin.version>
+        <vaadin.projectId>com.github.accelad-com.vaadin</vaadin.projectId>
+        <vaadin.version>bd68b37903</vaadin.version>
+        <vaadin.plugin.version>7.6.8</vaadin.plugin.version>
     </properties>
 
     <url>http://vaadin.com/charts</url>
@@ -66,17 +68,17 @@
         <dependencies>
             <!-- Vaadin -->
             <dependency>
-                <groupId>com.vaadin</groupId>
+                <groupId>${vaadin.projectId}</groupId>
                 <artifactId>vaadin-server</artifactId>
                 <version>${vaadin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.vaadin</groupId>
+                <groupId>${vaadin.projectId}</groupId>
                 <artifactId>vaadin-themes</artifactId>
                 <version>${vaadin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.vaadin</groupId>
+                <groupId>${vaadin.projectId}</groupId>
                 <artifactId>vaadin-client</artifactId>
                 <version>${vaadin.version}</version>
             </dependency>
@@ -85,13 +87,13 @@
             <dependency>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-testbench</artifactId>
-                <version>4.1.0.alpha1</version>
+                <version>4.0.3</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.11</version>
+                <version>4.12</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -155,7 +157,7 @@
                 <plugin>
                     <groupId>com.vaadin</groupId>
                     <artifactId>vaadin-maven-plugin</artifactId>
-                    <version>${vaadin.version}</version>
+                    <version>${vaadin.plugin.version}</version>
                 </plugin>
 
                 <plugin>
@@ -176,9 +178,7 @@
                                 <pluginExecution>
                                     <pluginExecutionFilter>
                                         <groupId>com.vaadin</groupId>
-                                        <artifactId>
-                                            vaadin-maven-plugin
-                                        </artifactId>
+                                        <artifactId>vaadin-maven-plugin</artifactId>
                                         <versionRange>[7.0-SNAPSHOT,)</versionRange>
                                         <goals>
                                             <goal>resources</goal>
@@ -212,6 +212,10 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
