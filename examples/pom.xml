@@ -26,7 +26,7 @@
         <!-- Vaadin dependencies -->
 
         <dependency>
-            <groupId>com.vaadin</groupId>
+            <groupId>${vaadin.projectId}</groupId>
             <artifactId>vaadin-server</artifactId>
         </dependency>
 

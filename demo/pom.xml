@@ -31,11 +31,11 @@
 
         <!-- Vaadin -->
         <dependency>
-            <groupId>com.vaadin</groupId>
+            <groupId>${vaadin.projectId}</groupId>
             <artifactId>vaadin-server</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.vaadin</groupId>
+            <groupId>${vaadin.projectId}</groupId>
             <artifactId>vaadin-themes</artifactId>
         </dependency>
 
